@@ -67,6 +67,17 @@ This project presents an AI-driven system designed to automate the generation of
   - BLEU-3: 0.1735
   - BLEU-4: 0.1026
 
+## Screenshots
+
+### Login
+![Login](login.png)
+
+### Home Page
+![Home Page](home.png)
+
+### Result Page
+![Result Page](output.png)
+
 ## Limitations
 
 - Limited training data affects report accuracy.
