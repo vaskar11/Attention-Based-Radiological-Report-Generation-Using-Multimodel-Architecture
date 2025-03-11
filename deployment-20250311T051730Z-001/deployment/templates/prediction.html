@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/predict.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Generated Medical Report</h2>
+
+        <!-- Image Section -->
+        <h3>Uploaded Images:</h3>
+        <div class="image-container">
+            <div>
+                <p>Frontal X-Ray:</p>
+                <img src="{{ url_for('static', filename='uploads/' + front_XRay) }}" alt="Frontal X-Ray">
+            </div>
+            <div>
+                <p>Lateral X-Ray:</p>
+                <img src="{{ url_for('static', filename='uploads/' + lateral_XRay) }}" alt="Lateral X-Ray">
+            </div>
+        </div>
+
+        <!-- Report Section -->
+        <div class="report-container">
+            <h3>Prediction Report:</h3>
+            <p>{{ prediction_text }}</p>
+        </div>
+
+        <br>
+        <a href="/home">Upload More</a>
+    </div>
+</body>
+</html>

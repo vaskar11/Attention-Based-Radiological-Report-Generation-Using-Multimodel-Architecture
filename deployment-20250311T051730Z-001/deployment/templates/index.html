@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X-Ray Report Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+</head>
+<body>
+<h2>Upload X-Ray Images</h2>
+
+<form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showLoadingMessage()">
+  <div class="container">
+    <div class="upload-box" id="box1">
+      <span class="span" id="span">Frontal X-Ray</span>
+      <input type="file" name="file_1" id="file1" required><br><br>
+    </div>
+
+    <div class="upload-box" id="box2">
+      <span class="span" id="span">Lateral X-Ray</span>
+      <input type="file" name="file_2" id="file2" required><br><br>
+    </div>
+  </div>
+  
+  <button type="submit">Generate Report</button>
+  
+  <!-- Message placeholder -->
+  <p id="loadingMessage" style="display: none; color: blue;">Wait!  Report being prepared...</p>
+
+</form>
+<a href="{{ url_for('logout') }}">Logout</a>
+
+<script src="{{ url_for('static', filename='js/myjs.js') }}"></script>
+
+</body> 
+
+
+
